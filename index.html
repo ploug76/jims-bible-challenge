@@ -137,4 +137,7 @@ $('help').onclick=()=>{if($('ov').style.display=='flex')return;const was=state;o
 let dp;addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;if(state=='title'&&$('inst'))$('inst').style.display='inline-block'});
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js');
 drawBG();title();
+
+// auto-pause when the app is backgrounded
+document.addEventListener('visibilitychange',()=>{const b=document.getElementById('pause');if(document.hidden&&!paused&&b&&getComputedStyle(b).display!='none')b.click()});
 </script></body></html>
