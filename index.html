@@ -42,7 +42,8 @@ html,body{margin:0;height:100%;overflow:hidden;background:#3a2414;font-family:Ge
 .sc.hint img{width:52px;height:52px;border-radius:50%;border:3px solid #d4a017;flex:none;margin-right:8px;object-fit:cover}
 #ios{font-size:12px;color:#6b1d2a;margin-top:6px;display:none}
 .conf{position:fixed;width:8px;height:12px;z-index:9;pointer-events:none;top:-20px;animation:cf 1.8s linear forwards}@keyframes cf{to{transform:translateY(110vh) rotate(720deg)}}
-</style><!--sample--><script>(()=>{try{const R=location.pathname.split('/')[1]||'',K='pa_sample:'+R,q=new URLSearchParams(location.search),v=q.get('sample');
+</style><script>const FORCE_UNLOCKED = true; // Peter 10/28: free until further notice. Set to false to restore the lock.
+window.__FORCE_UNLOCKED=FORCE_UNLOCKED;</script><!--sample--><script>(()=>{try{if(window.__FORCE_UNLOCKED){window.__SAMPLE=null;try{sessionStorage.removeItem('pa_sample:'+(location.pathname.split('/')[1]||''))}catch(e){}return}const R=location.pathname.split('/')[1]||'',K='pa_sample:'+R,q=new URLSearchParams(location.search),v=q.get('sample');
 if(v==='0'||(!v&&/\/peters-arcade\//.test(document.referrer)))sessionStorage.removeItem(K);
 if(v&&v!=='0')sessionStorage.setItem(K,v.replace(/[^a-z0-9-]/gi,'').slice(0,16)||'1');
 const s=sessionStorage.getItem(K);window.__SAMPLE=s||null;if(!s)return;
