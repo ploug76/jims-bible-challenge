@@ -7,10 +7,10 @@ html,body{margin:0;height:100%;overflow:hidden;background:#3a2414;font-family:Ge
 .cand:after{content:"";position:absolute;top:-6px;left:4px;width:8px;height:14px;background:radial-gradient(ellipse at 50% 70%,#fff8c0,#ffb030 60%,rgba(255,120,0,0) 75%);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;animation:fl .18s infinite alternate;box-shadow:0 0 22px 10px rgba(255,190,80,.35)}
 @keyframes fl{from{transform:scale(1,1) rotate(-2deg)}to{transform:scale(.9,1.08) rotate(2deg)}}
 #hud{position:fixed;top:0;left:0;right:0;height:58px;z-index:3;color:#ffe9b0;display:none;padding:6px 10px;box-sizing:border-box;background:linear-gradient(#2a140c,rgba(42,20,12,.6))}
-#hud .l1{font-size:15px;font-weight:bold}#hud .l2{font-size:12px;opacity:.9;margin-top:2px}
+#hud .l1{font-size:16px;font-weight:bold}#hud .l2{font-size:16px;opacity:.9;margin-top:1px}
 #bar{position:absolute;left:10px;right:150px;bottom:5px;height:8px;border-radius:4px;background:rgba(255,255,255,.2)}#barf{height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,#d4a017,#ffe27a);transition:width .4s}
-.tb{position:fixed;top:7px;width:42px;height:42px;border-radius:50%;border:2px solid #e8c25a;background:#6b1d2a;color:#fff;font-size:19px;z-index:4;display:none;padding:0}
-#pause{right:8px}#mute{right:56px}#help{right:104px}
+.tb{position:fixed;top:7px;width:44px;height:44px;border-radius:50%;border:2px solid #e8c25a;background:#6b1d2a;color:#fff;font-size:19px;z-index:4;display:none;padding:0}
+#pause{right:8px}#mute{right:58px}#help{right:108px}
 #board{position:fixed;left:0;right:0;z-index:2;display:none}
 .card{position:absolute;perspective:600px;cursor:pointer}
 .in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
@@ -28,19 +28,21 @@ html,body{margin:0;height:100%;overflow:hidden;background:#3a2414;font-family:Ge
 .card.done .face{filter:saturate(.55) brightness(.8);opacity:.7}.card.done .face:after{content:"✔";position:absolute;right:3px;top:1px;color:#2e8b57;font:bold 13px sans-serif}
 .card.glow .face{box-shadow:0 0 18px 6px #ffe27a}.card.bad .face{box-shadow:0 0 12px 4px #ff6a6a}
 #strip{position:fixed;left:6px;right:6px;bottom:6px;height:104px;z-index:3;display:none;gap:6px}
-.sc{flex:1;border-radius:10px;padding:6px 8px;box-sizing:border-box;overflow:auto;font-size:14px;line-height:1.3;background:rgba(255,250,240,.93);color:#3a2414;border:2px solid #b8923a}
+.sc{flex:1;border-radius:10px;padding:6px 8px;box-sizing:border-box;overflow:auto;font-size:16px;line-height:1.3;background:rgba(255,250,240,.93);color:#3a2414;border:2px solid #b8923a}
 .sc.R{background:rgba(107,29,42,.95);color:#ffe27a;border-color:#e8c25a;font-weight:bold;font-size:18px;display:flex;align-items:center;justify-content:center;text-align:center}
-.sc.hint{background:rgba(42,20,12,.75);color:#ffe9b0;border-color:#8a6a2a;display:flex;align-items:center;justify-content:center;text-align:center;font-size:14px}
+.sc.hint{background:rgba(42,20,12,.75);color:#ffe9b0;border-color:#8a6a2a;display:flex;align-items:center;justify-content:center;text-align:center;font-size:16px}
 #ov{position:fixed;inset:0;z-index:8;display:none;align-items:center;justify-content:center;background:rgba(20,8,4,.6)}
-#box{width:min(88vw,460px);max-height:84vh;overflow:auto;background:linear-gradient(135deg,#fffaf0,#f3e5c4);border:5px solid #d4a017;outline:3px solid #6b1d2a;border-radius:16px;padding:16px 18px;box-sizing:border-box;color:#3a2414;text-align:center;font-size:15px;line-height:1.4;touch-action:pan-y}
+#box{width:min(88vw,460px);max-height:84vh;overflow:auto;background:linear-gradient(135deg,#fffaf0,#f3e5c4);border:5px solid #d4a017;outline:3px solid #6b1d2a;border-radius:16px;padding:16px 18px;box-sizing:border-box;color:#3a2414;text-align:center;font-size:16px;line-height:1.4;touch-action:pan-y}
 #box h1{margin:4px 0 2px;color:#6b1d2a;font-size:30px;line-height:1.1}#box h2{margin:4px 0 8px;color:#6b1d2a}
 #box .vs{font-size:19px;line-height:1.45;margin:10px 0;font-style:italic}#box .rf{font-weight:bold;color:#6b1d2a;font-size:18px}
 #box button{font:bold 18px Georgia,serif;padding:10px 22px;margin:6px 4px 2px;border-radius:26px;border:3px solid #e8c25a;background:#6b1d2a;color:#ffe9b0}
-#box button.alt{background:#2e5e8a}#box .small{font-size:11.5px;opacity:.8;margin-top:8px}#box p{margin:6px 0}#box ul{text-align:left;padding-left:20px;margin:6px 0}
+#box button.alt{background:#2e5e8a}#box .small{font-size:16px;opacity:.8;margin-top:8px}#box p{margin:6px 0}#box ul{text-align:left;padding-left:20px;margin:6px 0}
 #pop{position:fixed;left:50%;top:40%;transform:translate(-50%,-50%);z-index:7;font:bold 34px Georgia,serif;color:#ffe27a;text-shadow:0 0 4px #6b1d2a,0 2px 0 #6b1d2a,0 0 18px #000;pointer-events:none;opacity:0;transition:opacity .2s}
 .jimP{display:block;width:132px;height:132px;margin:2px auto 6px;border-radius:50%;border:5px solid #d4a017;outline:3px solid #6b1d2a;box-shadow:0 4px 12px rgba(0,0,0,.35);object-fit:cover}.jimS{width:84px;height:84px;border-width:4px}
 .sc.hint img{width:52px;height:52px;border-radius:50%;border:3px solid #d4a017;flex:none;margin-right:8px;object-fit:cover}
 #ios{font-size:12px;color:#6b1d2a;margin-top:6px;display:none}
+@media (orientation:landscape) and (max-height:520px){#box{width:min(94vw,760px);max-height:96vh;padding:8px 16px}#box .jimP{float:left;width:84px;height:84px;margin:4px 14px 4px 0;border-width:4px}#box h1{font-size:24px}#box h2{margin:2px 0 4px}#box p{margin:3px 0}#box .vs{margin:6px 0;font-size:18px}#box button{padding:8px 20px;margin:4px 4px 2px;min-height:44px}#box .small{clear:both}#box ul{columns:2;column-gap:24px}}
+html body .dk{height:44px!important;line-height:40px!important;border-radius:22px!important;font-size:16px!important}html body .dk.ic{width:44px!important}html body #dockHint,html body #dockHint.smpc{font-size:16px!important}html body #dockHintX{width:44px!important;height:44px!important;margin-top:-22px!important;border-radius:22px!important}html body #shareToast{height:44px!important;line-height:40px!important;font-size:16px!important}html body #smpBuy{height:44px!important;font-size:16px!important}html body #smpLock p{font-size:16px!important}html body #smpLock .lnk{display:flex!important;align-items:center;justify-content:center;min-height:44px;font-size:16px!important}html body #palbX{width:44px!important;height:44px!important}html body #palbCard .sub,html body #palbCard .note,html body #palbCard .src,html body #palbCard .err,html body #palbCard .mybest,html body #palbCard label,html body #palbList li{font-size:16px!important}
 .conf{position:fixed;width:8px;height:12px;z-index:9;pointer-events:none;top:-20px;animation:cf 1.8s linear forwards}@keyframes cf{to{transform:translateY(110vh) rotate(720deg)}}
 </style><script>const FORCE_UNLOCKED = true; // Peter 10/28: free until further notice. Set to false to restore the lock.
 window.__FORCE_UNLOCKED=FORCE_UNLOCKED;</script><!--sample--><script>(()=>{try{if(window.__FORCE_UNLOCKED){window.__SAMPLE=null;try{sessionStorage.removeItem('pa_sample:'+(location.pathname.split('/')[1]||''))}catch(e){}return}const R=location.pathname.split('/')[1]||'',K='pa_sample:'+R,q=new URLSearchParams(location.search),v=q.get('sample');
@@ -96,11 +98,13 @@ function points(a,b){if(a.v!=b.v)return 0;return a.k==b.k?1:5}
 function build(){const B=$('board');B.innerHTML='';for(const c of cards){const v=VERSES[c.v],el=document.createElement('div');el.className='card';el.dataset.i=c.i;
  el.innerHTML=`<div class="in"><div class="back"><span>✝</span></div><div class="face ${c.k}"><div class="lab">${c.k=='V'?'📜 VERSE':'📖 REFERENCE'}</div><div class="tx"></div></div></div>`;
  el.querySelector('.tx').textContent=c.k=='V'?v.f:v.r;el.addEventListener('click',()=>tap(c.i));c.el=el;B.appendChild(el)}layout()}
-function layout(){if(!cards.length)return;const B=$('board'),top=62,bot=118,W=innerWidth,H=innerHeight-top-bot,N=cards.length,gp=6;let bestc=null;
- for(let c=3;c<=8;c++){const r=Math.ceil(N/c),cw=Math.min((W-12-gp*(c-1))/c,(H-gp*(r-1))/r/1.25);if(!bestc||cw>bestc.cw)bestc={c,r,cw}}
- const{c,r,cw}=bestc,ch=cw*1.25,ox=(W-(c*cw+(c-1)*gp))/2,oy=(H-(r*ch+(r-1)*gp))/2;B.style.top=top+'px';B.style.height=H+'px';
+function stripPos(){const s=$('strip'),land=innerWidth>innerHeight*1.25&&innerHeight<600,sw=land?Math.round(Math.min(300,innerWidth*0.27)):0;
+ Object.assign(s.style,land?{left:'auto',right:'6px',top:'62px',bottom:'6px',width:sw+'px',height:'auto',flexDirection:'column'}:{left:'',right:'',top:'',bottom:'',width:'',height:'',flexDirection:''});return sw}
+function layout(){const SW=stripPos();if(!cards.length)return;const B=$('board'),top=62,bot=SW?8:118,W=innerWidth-(SW?SW+12:0),H=innerHeight-top-bot,N=cards.length,gp=6;let bestc=null; // v10: landscape uses the side for the strip
+ for(let c=3;c<=(SW?11:8);c++){const r=Math.ceil(N/c),cw=Math.min((W-12-gp*(c-1))/c,(H-gp*(r-1))/r/1.25);if(!bestc||cw>bestc.cw)bestc={c,r,cw}}
+ const{c,r,cw}=bestc,ch=cw*1.25,ox=(W-(c*cw+(c-1)*gp))/2,oy=(H-(r*ch+(r-1)*gp))/2;B.style.top=top+'px';B.style.height=H+'px';B.style.right=SW?(SW+12)+'px':'0';
  cards.forEach((k,i)=>{const e=k.el,x=i%c,y=Math.floor(i/c);Object.assign(e.style,{left:ox+x*(cw+gp)+'px',top:oy+y*(ch+gp)+'px',width:cw+'px',height:ch+'px'});
-  const tx=e.querySelector('.tx');let fs=k.k=='R'?Math.min(cw/5.2,20):Math.min(cw/5.4,18);tx.style.fontSize=fs+'px';e.querySelector('.lab').style.fontSize=Math.max(6,Math.min(9,cw/11))+'px';
+  const tx=e.querySelector('.tx');let fs=k.k=='R'?Math.min(cw/5.2,20):Math.min(cw/5.4,18);tx.style.fontSize=fs+'px';e.querySelector('.lab').style.fontSize=Math.max(9,Math.min(12,cw/8))+'px';
   let n=0;while((tx.scrollHeight>tx.clientHeight+1||tx.scrollWidth>tx.clientWidth+1)&&fs>6&&n++<50){fs-=.5;tx.style.fontSize=fs+'px'}})}
 addEventListener('resize',()=>{drawBG();layout()});
 function tap(i){if(state!='play'||paused)return;A();const c=cards[i];
@@ -207,7 +211,7 @@ window.__share=window.__dock={share,install,vis,tick,tapRects,SH,get last(){retu
 <div id="smpLock" role="dialog" aria-modal="true" aria-label="Free sample complete"><div class="c"><div class="k">🔒</div><h2>Free sample complete!</h2><p id="smpLockTxt"></p><a id="smpLockBuy" class="b buy" target="_blank" rel="noopener">💳 Unlock the full game</a><button id="smpLockLb" class="b" type="button">🏆 Leaderboard &amp; my score</button><a id="smpLockMore" class="lnk">◀ More free samples</a></div></div>
 <script>(()=>{const SMP=window.__SAMPLE;if(!SMP)return;const C={"when": "level>=3&&state=='play'", "secs": 480, "label": "levels 1–2"},PAY=({"bhs": "https://ko-fi.com/bookofheavenstudios/commissions?commissionAlias=5df889530a", "589": "https://ko-fi.com/five8nine/commissions?commissionAlias=5c81b9373a"})[SMP]||'',PRICE="$1.99",R=location.pathname.split('/')[1]||'x',TK='pa_sample_t:'+R;const $=i=>document.getElementById(i);
 const el=$('smpLock'),buy=$('smpLockBuy'),lb=$('smpLockLb'),more=$('smpLockMore');
-$('smpLockTxt').textContent='You played '+C.label+' of the free sample. Unlock the full game for '+PRICE+': every level, no time limit, and it installs on your phone like an app.';
+$('smpLockTxt').textContent='You played '+C.label+' of the free sample. Unlock the full game for '+PRICE+': every level, and it installs on your phone like an app.';
 if(PAY){buy.href=PAY;buy.textContent='💳 Unlock the full game · '+PRICE}else{buy.classList.add('off');buy.textContent='Checkout coming soon';buy.removeAttribute('href')}
 more.href=SMP==='589'?'https://ploug76.github.io/589-studios/#games':'https://ploug76.github.io/book-of-heaven-studios/#games';
 const W=s=>{if(!s)return()=>false;const f=Function('try{return !!('+s+')}catch(e){return false}');return f};const when=W(C.when),onTitle=W("typeof state!=='undefined'&&state==='title'");
@@ -398,4 +402,4 @@ async function postNow(){if(!G)return;const F=x=>x==null?()=>undefined:typeof x=
   return show()}
 const api={init,postNow,syncBest,localBest,gameOver,submitQuiet,watch,show,close,isOpen:()=>open,get backend(){return REMOTE?REMOTE.name:'local'},_t:{cleanName,nameError,fmt,boardId,pid,keyOf}};
 window.PALB=api})();
-</script><script>PALB.init({"game": "jims-bible-challenge", "title": "Jim's Bible Challenge", "order": "desc", "unit": "pts", "min": 0, "max": 1000000, "boards": null, "watch": [{"when": "state==='done'", "score": "score", "silent": true, "delay": 300}]})</script><!--/lb--></body></html>
+</script><script>PALB.init({"game": "jims-bible-challenge", "title": "Jim's Bible Challenge", "overTitle": "🏆 SAVE YOUR SCORE", "order": "desc", "unit": "pts", "min": 0, "max": 1000000, "boards": null, "watch": [{"when": "state==='done'&&!!localStorage.getItem('pa_lb_name')", "score": "score", "silent": true, "delay": 300}]})</script><!--/lb--></body></html>
