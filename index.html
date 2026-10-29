@@ -430,4 +430,23 @@ window.PALB=api})();
 #palbTabs button{min-height:48px!important;font-size:16px!important}
 #palbList li{min-height:30px;height:auto!important;font-size:16px!important}
 </style>
+<!-- gamepad:start -->
+<script src="gamepad.js?v=2"></script>
+<script>
+(function(){
+ try{var _h=howTo;howTo=function(){return _h.apply(this,arguments)+'<p class="gp-help small">🎮 <b>Controller</b> (USB or Bluetooth, on a computer or paired to your phone): D-pad or stick moves the gold box between cards, <b>A</b> flips a card, <b>Y</b> opens How to Play, <b>Start</b> pauses, <b>Select</b> sound, <b>B</b> goes back.</p>'}}catch(e){}
+ function cl(id){var e=document.getElementById(id);if(e&&getComputedStyle(e).display!=='none')e.click()}
+ GamepadSupport.init({
+  keys:{start:function(p){if(p&&state==='play'){if(!paused)cl('pause');else cl('rs')}},back:function(p){if(p)cl('mute')},y:function(p){if(p&&state==='play'&&getComputedStyle(document.getElementById('ov')).display!=='flex')cl('help')}},
+  focusSel:'button,#board .card',
+  ignoreSel:'#dock,#mute,#pause,#help,#inst,#ios,.tb,#dockHint',
+  menu:function(){return true},
+  isPaused:function(){return paused||state!=='play'},
+  onDisconnect:function(){if(state==='play'&&!paused&&getComputedStyle(document.getElementById('ov')).display!=='flex')cl('pause')},
+  backSel:'#bk,#rs',
+  hint:{text:'🎮 Controller: D-pad to pick · A to select · B back · Start pause',when:function(){return state==='title'&&!document.querySelector('#palbOv.on,#smpLock.on')}}
+ });
+})();
+</script>
+<!-- gamepad:end -->
 </body></html>
